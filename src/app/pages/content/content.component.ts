@@ -26,11 +26,13 @@ export class ContentComponent implements OnInit {
   }
 
   setValuesToComponent(id:string | null){
-    const result = dataFake.filter(article => article.id == id)[0]
+    if(id == null) return;
 
+    const result = dataFake.filter((value: { id: string; }) => value.id == id)[0]
+    this.photoCover = result.movie_banner
     this.contentTitle = result.title
     this.contentDescription = result.description
-    this.photoCover = result.photoCover
+    console.log(result);
   }
 
 }

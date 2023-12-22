@@ -1,9 +1,33 @@
 .container__articles{
+  max-width: 1300px;
+  margin: auto;
   margin-top: 30px;
 
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+.container__articles > h2{
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.articles__main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+@media (max-width: 1200px) {
+  .articles__main{
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+}
+@media (max-width: 800px) {
+  .articles__main{
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
 
