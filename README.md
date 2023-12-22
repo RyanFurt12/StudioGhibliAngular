@@ -1,6 +1,10 @@
-# AngularBlog
+# StudioGhibliAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+
+## Packages
+
+Run `npm serve` for install all the dependences of the project.
 
 ## Development server
 
