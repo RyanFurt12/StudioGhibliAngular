@@ -1,3 +1,7 @@
+*{
+    transition: .5s;
+}
+
 .container__small-card{
     display: flex;
     flex-direction: column;
@@ -8,6 +12,18 @@ img{
     height: 300px;
 }
 
-h3{
+h3, h4{
+    background-color: transparent;
     text-align: center;
+    z-index: 2;
+}
+
+a:hover img{
+    z-index: 0;
+    scale: 1.05;
+    transform: translateY(-2.5%);
+}
+
+a:hover h3,a:hover h4{
+    filter: drop-shadow(2px 2px 5px #00800090);
 }
