@@ -21,18 +21,22 @@ export class ContentComponent implements OnInit {
     this.route.paramMap.subscribe( value =>
      this.id = value.get("id")
     )
-
+    
     this.setValuesToComponent(this.id)
   }
 
   setValuesToComponent(id:string | null){
     if(id == null) return;
-
     const result = dataFake.filter((value: { id: string; }) => value.id == id)[0]
-    this.photoCover = result.movie_banner
-    this.contentTitle = result.title
-    this.contentDescription = result.description
-    console.log(result);
+
+    if(result == undefined) setTimeout(() => {
+      this.setValuesToComponent(id)
+    }, 500);
+    else {
+      this.photoCover = result.movie_banner
+      this.contentTitle = result.title
+      this.contentDescription = result.description
+    }
   }
 
 }

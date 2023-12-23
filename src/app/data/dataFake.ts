@@ -7,7 +7,7 @@ fetch("https://ghibliapi.vercel.app/films")
   return response
 })
 .then(response => dataFake = response)
-.then(response => console.log(dataFake))
+// .then(response => console.log(dataFake))
 
 
 
